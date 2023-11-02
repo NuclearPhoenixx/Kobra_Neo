@@ -14,6 +14,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Enabled quick home (X and Y homes at the same time)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
+- Fixed ABL probe's y-offset coordinates
 - UI changes - dark(er) background, removed ugly yellow text color, fixed typos, more languages (need help for translations!)
 
 ## A note on Linear Advance (and why it's not enabled)
