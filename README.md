@@ -76,7 +76,7 @@ Having these values saved in the firmware itself could save a lot of headaches, 
 At the moment, it looks like it's only possible through some ancient software that has been outdated for years. It works, but all the code is really old and messy... Anyways, if you want to compile a `firmware.bin` yourself, go ahead, it's surprisingly easy if you're not a newbie to programming. Here is a great step-by-step tutorial:
 [https://www.reddit.com/r/anycubic/comments/y2waxu/tutorial_how_to_build_anycubic_marlin_source_code/](https://www.reddit.com/r/anycubic/comments/y2waxu/tutorial_how_to_build_anycubic_marlin_source_code/)
 
-### Based on
+## Based on
 
 - [jokubasver/Kobra_Neo](https://github.com/jokubasver/Kobra_Neo)
 - [sjorge/Kobra_Neo_Fw](https://github.com/sjorge/Kobra_Neo_Fw)
@@ -84,3 +84,7 @@ At the moment, it looks like it's only possible through some ancient software th
 - [Auburn/Kobra_Go](https://github.com/Auburn/Kobra_Go)
 
 Many thanks to all these people!
+
+## More Info
+
+More info about the printer, its firmware, mainboard and so much more can be found in the [KobraGoNeoInsights](https://1coderookie.github.io/KobraGoNeoInsights/) by [@1coderookie](https://github.com/1coderookie).
