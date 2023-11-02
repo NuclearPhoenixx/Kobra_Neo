@@ -1,4 +1,4 @@
-## Modified Anycubic Kobra Neo V1.3.3  Firmware
+## Modified Anycubic Kobra Neo V1.3.3 Firmware
 
 ## Features
 - Increased default extruder max feedrate from 25 to 50 (now retraction speed is not limited to 25mm/s)
@@ -11,7 +11,7 @@
 - Enabled quick home (X and Y homes at the same time)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
-- UI changes - black background, removed ugly yellow text color, fixed typos
+- UI changes - black background, removed ugly yellow text color, fixed typos, more languages (need help for translations!)
 - Added personal PID and E-Step values
 
 ## A note on Linear Advance and why it's not enabled
