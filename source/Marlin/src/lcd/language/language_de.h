@@ -39,11 +39,11 @@ namespace Language_de {
   LSTR MSG_NO                             = _UxGT("NEIN");
   LSTR MSG_BACK                           = _UxGT("Zurück");
   LSTR MSG_MEDIA_ABORTING                 = _UxGT("Abbruch...");
-  LSTR MSG_MEDIA_INSERTED                 = _UxGT("Medium erkannt");
-  LSTR MSG_MEDIA_REMOVED                  = _UxGT("Medium entfernt");
-  LSTR MSG_MEDIA_WAITING                  = _UxGT("Warten auf Medium");
+  LSTR MSG_MEDIA_INSERTED                 = _UxGT("SD-Karte erkannt");
+  LSTR MSG_MEDIA_REMOVED                  = _UxGT("SD-Karte entfernt");
+  LSTR MSG_MEDIA_WAITING                  = _UxGT("Warten auf SD-Karte");
   LSTR MSG_SD_INIT_FAIL                   = _UxGT("SD Init fehlgesch.");
-  LSTR MSG_MEDIA_READ_ERROR               = _UxGT("Medium Lesefehler");
+  LSTR MSG_MEDIA_READ_ERROR               = _UxGT("SD-Karte Lesefehler");
   LSTR MSG_MEDIA_USB_REMOVED              = _UxGT("USB Gerät entfernt");
   LSTR MSG_MEDIA_USB_FAILED               = _UxGT("USB Start fehlge.");
   LSTR MSG_KILL_SUBCALL_OVERFLOW          = _UxGT("Subcall überschritten");
