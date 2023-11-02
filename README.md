@@ -1,4 +1,4 @@
-## Modified Anycubic Kobra Neo V1.33 Firmware
+## Modified Anycubic Kobra Neo V1.3.3  Firmware
 
 ## Features
 - Increased default extruder max feedrate from 25 to 50 (now retraction speed is not limited to 25mm/s)
