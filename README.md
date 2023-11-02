@@ -9,7 +9,6 @@
 - Increased probing accuracy by doing multiple probes per point
 - Increased speed for the first Z-probe approach when double-probing
 - Enabled quick home (X and Y homes at the same time)
-- ~~Set default mainboard fan speed to 5 instead of 255~~ (reverted as I had a few "Heater_ID: 0 - Printer halted" errors, if you'd like to experiment with mainboard fan speed, use the menu item Configuration->Controller Fan)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
 - UI changes - black background, removed ugly yellow text color, fixed typos
