@@ -82,6 +82,7 @@ At the moment, it looks like it's only possible through some ancient software th
 - [sjorge/Kobra_Neo_Fw](https://github.com/sjorge/Kobra_Neo_Fw)
 - [jojos38/anycubic-kobra-improved-firmware](https://github.com/jojos38/anycubic-kobra-improved-firmware)
 - [Auburn/Kobra_Go](https://github.com/Auburn/Kobra_Go)
+- [Kuba1842/Kobra_Neo-Czech](https://github.com/Kuba1842/Kobra_Neo-Czech)
 
 Many thanks to all these people!
 
