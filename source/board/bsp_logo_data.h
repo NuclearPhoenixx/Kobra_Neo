@@ -1,7 +1,6 @@
- #ifndef __LOgo_data_H
-#define __LOgo_data_H
+ #ifndef __BSP_LOGO_DATA_H
+#define __BSP_LOGO_DATA_H
 #include "stdint.h"
-
 
 
 const unsigned char _ac[76800]  __attribute((aligned (4)))= {
@@ -1927,7 +1926,11 @@ const unsigned char _ac[76800]  __attribute((aligned (4)))= {
         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
 };
 
-
+/*
+const unsigned char _ac[76800]  __attribute((aligned (4)))= {
+      // TODO: Custom LOGO?
+};
+*/
 
 
 const uint32_t GUI_COLOR_Colors4[256] __attribute((aligned (4)))= {

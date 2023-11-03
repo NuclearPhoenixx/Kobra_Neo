@@ -92,8 +92,8 @@ void MarlinUI::tft_idle() {
          Show_logo_secreen();
 		 delay(100);
 		 BL_ON;
-		 delay(1000);
-         AC_PlayTune(BEEPER_PIN, Anycubic_PowerOn, 1); 
+		 //delay(1000);
+     //    AC_PlayTune(BEEPER_PIN, Anycubic_PowerOn, 1); 
         
   }
 
