@@ -551,9 +551,7 @@ void MarlinUI::draw_status_screen(char seclect) {
   
     tft.canvas(15, 145, 80, 20);
     tft.set_background(COLOR_BACKGROUND);
-    tft_string.set(GET_TEXT(MSG_PRINT_TIME));
-		//tft_string.trim();
-    tft.add_text(0, 0, color, tft_string);
+    tft.add_text(0, 0, color, GET_TEXT(MSG_PRINT_TIME));
 
   tft.canvas(10, 170, 100, 20);
   tft.set_background(COLOR_BACKGROUND);
