@@ -17,6 +17,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Fixed ABL probe's y-offset coordinates
 - Disabled power-loss recovery by default to help with print quality (can still be enabled manually)
 - UI changes - dark(er) background, removed ugly yellow text color, fixed typos, more languages (*need help for translations!*), scroll long file names, ...
+- Halfed startup time from about 10s to 5s
 
 ## A note on Linear Advance (and why it's not enabled)
 
