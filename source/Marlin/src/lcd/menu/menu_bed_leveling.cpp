@@ -255,25 +255,6 @@ void leveing_probeing()
 		}
 		else if(ui.preheating_start == true && ui.preheating_stop == false)
 		{
-//			tft.canvas(0, 60, TFT_WIDTH, 30);
-//			tft.set_background(COLOR_BACKGROUND);
-//			tft_string.set(GET_TEXT(MSG_WAIT_LEVELING_HEAT));
-//			tft_string.trim();
-//			tft.add_text(tft_string.center(TFT_WIDTH),5,COLOR_YELLOW,tft_string);
-//		
-//			tft.canvas(110, 100, 160, 30);
-//			tft.set_background(COLOR_BACKGROUND); 
-//			tft.add_text(0,0,COLOR_YELLOW, "E :");
-//			tft.add_text(30,0,COLOR_YELLOW, i16tostr3rj(hotend_currentTemperature));
-//			tft.add_text(70,0,COLOR_YELLOW, "/"); 
-//			tft.add_text(80,0,COLOR_YELLOW, i16tostr3rj(LEVELING_NOZZLE_TEMP));
-
-//			tft.canvas(110, 140, 160, 30);
-//			tft.set_background(COLOR_BACKGROUND); 
-//			tft.add_text(0,0,COLOR_YELLOW, "B :");				
-//			tft.add_text(30,0,COLOR_YELLOW, i16tostr3rj(bed_currenttTemperature));
-//			tft.add_text(70,0,COLOR_YELLOW, "/"); 
-//			tft.add_text(80,0,COLOR_YELLOW, i16tostr3rj(LEVELING_BED_TEMP));
 			tft.canvas(0, 60, TFT_WIDTH, 30);
 			tft.set_background(COLOR_BACKGROUND);
 			tft_string.set(GET_TEXT(MSG_WAIT_LEVELING_HEAT));
