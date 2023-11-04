@@ -229,8 +229,8 @@ void menu_tune() {
       SUBMENU(MSG_BABYSTEP_Y, []{ _lcd_babystep_go(_lcd_babystep_y); });
     #endif
     #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
-      SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
-   //    EDIT_ITEM(float42_52, MSG_ZPROBE_ZOFFSET, &probe.offset.z, -5.00, 5.00, []{ lcd_babystep_zoffset(); });
+      //SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
+      EDIT_ITEM(float42_52, MSG_ZPROBE_ZOFFSET, &probe.offset.z, -5.00, 5.00, []{ lcd_babystep_zoffset(); });
     #else
       SUBMENU(MSG_BABYSTEP_Z, lcd_babystep_z);
     #endif
@@ -264,7 +264,7 @@ void Lcd_set_feedrate()
       fresh_data +=ui.encoderPosition;
        ui.encoderPosition = 0;
        LIMIT(fresh_data, 10, 300);
-       feedrate_percentage=fresh_data;   //打印速度不同于温度，他可以直接生效，如果注释这一行就不生效，注释掉就是最后确定才生效
+       feedrate_percentage=fresh_data;   //锟斤拷印锟劫度诧拷同锟斤拷锟铰度ｏ拷锟斤拷锟斤拷锟斤拷直锟斤拷锟斤拷效锟斤拷锟斤拷锟阶拷锟斤拷锟揭伙拷芯筒锟斤拷锟叫э拷锟阶拷偷锟斤拷锟斤拷锟斤拷锟斤拷确锟斤拷锟斤拷锟斤拷效
        ui.refresh(LCDVIEW_CALL_REDRAW_NEXT); 
     }
 
@@ -291,7 +291,7 @@ void Lcd_set_flow()
         ui.AC_bar_control=false;
         ui.enable_encoder_multiplier(false);
         planner.flow_percentage[active_extruder]=fresh_data;
-        planner.refresh_e_factor(active_extruder);   //挤出速率确定
+        planner.refresh_e_factor(active_extruder);   //锟斤拷锟斤拷锟斤拷锟斤拷确锟斤拷
         fresh_flag=0;
     return  ui.goto_previous_screen_no_defer();
   }
