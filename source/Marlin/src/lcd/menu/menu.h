@@ -31,7 +31,7 @@
 
 
 #define DEVICE_NAME             "Anycubic Kobra Neo"
-#define FIRMWARE_VER            "V1.3.3 (NP-Mod V1.1.0)"
+#define FIRMWARE_VER            "V1.3.3 (NP-Mod V1.1.1)"
 #define BUILD_VOLUME            "220 x 220 x 250 (mm)"
 #define TECH_SUPPORT            "github.com/NuclearPhoenixx"
 
