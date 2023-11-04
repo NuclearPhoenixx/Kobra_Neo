@@ -198,13 +198,13 @@ void draw_heater_status(uint16_t x, uint16_t y, const int8_t Heater,char flag) {
   tft.add_image(1, 18, image, Color);
 
   tft_string.set((uint8_t *)i16tostr3rj(currentTemperature));
- // tft_string.add(LCD_STR_DEGREE);
+  //tft_string.add(LCD_STR_DEGREE);
   tft_string.trim();
   tft.add_text(tft_string.center(64) + 2, 72, Color, tft_string);
 
   if (targetTemperature >= 0) {
     tft_string.set((uint8_t *)i16tostr3rj(targetTemperature));
-//    tft_string.add(LCD_STR_DEGREE);
+    //tft_string.add(LCD_STR_DEGREE);
     tft_string.trim();
     tft.add_text(tft_string.center(64) + 2, 8, Color, tft_string);
   }
@@ -252,16 +252,19 @@ void MarlinUI::draw_status_screen(char seclect) {
         case ITEM_E0:
           if(seclect==1)
           {
-//            if(blink)
-//            {
-//               draw_heater_status(x, y, H_E0);
-//            }
-//            else
-//            {
-//                tft.canvas(x, y, 64, 100);
-//                tft.set_background(COLOR_BACKGROUND);
-//            }
-                 draw_heater_status(x, y, H_E0,1);
+            /*
+            if(blink) // Blink selection box
+            {
+               draw_heater_status(x, y, H_E0, 1);
+            }
+            else
+            {
+                //tft.canvas(x, y, 64, 100);
+                //tft.set_background(COLOR_BACKGROUND);
+                draw_heater_status(x, y, H_E0, 0);
+            }
+            */
+            draw_heater_status(x, y, H_E0,1);
           }
           else
           {
@@ -279,16 +282,19 @@ void MarlinUI::draw_status_screen(char seclect) {
         case ITEM_BED:
           if(seclect==2)
           {
-//            if(blink)
-//            {
-//                 draw_heater_status(x, y, H_BED); 
-//            }
-//            else
-//            {
-//                tft.canvas(x, y, 64, 100);
-//                tft.set_background(COLOR_BACKGROUND);
-//            }
-                draw_heater_status(x, y, H_BED,1); 
+            /*
+            if(blink) // Blink selection box
+            {
+                 draw_heater_status(x, y, H_BED, 1); 
+            }
+            else
+            {
+                //tft.canvas(x, y, 64, 100);
+                //tft.set_background(COLOR_BACKGROUND);
+                draw_heater_status(x, y, H_BED,0);
+            }
+            */
+            draw_heater_status(x, y, H_BED,1); 
           }
           else
           {
@@ -307,16 +313,19 @@ void MarlinUI::draw_status_screen(char seclect) {
         case ITEM_FAN:
            if(seclect==3)
           {
-//            if(blink)
-//            {
-//                draw_fan_status(x, y, blink);
-//            }
-//            else
-//            {
-//                tft.canvas(x, y, 64,100);
-//                tft.set_background(COLOR_BACKGROUND);
-//            }
-                draw_fan_status(x, y, blink,1);
+            /*
+            if(blink) // Blink selection box
+            {
+                draw_fan_status(x, y, blink, 1);
+            }
+            else
+            {
+                draw_fan_status(x, y, blink, 0);
+                //tft.canvas(x, y, 64,100);
+                //tft.set_background(COLOR_BACKGROUND);
+            }
+            */
+            draw_fan_status(x, y, blink,1);
           }
           else
           {
@@ -337,6 +346,7 @@ void MarlinUI::draw_status_screen(char seclect) {
 //    }
 //    else
 //    {
+      /* // Do not blink z-offset
       if( blink)
       {
         color=COLOR_VIVID_GREEN;
@@ -345,13 +355,15 @@ void MarlinUI::draw_status_screen(char seclect) {
       {
         color=COLOR_GREY;
       }
+      */
+      color=COLOR_VIVID_GREEN;
       tft.canvas(4, 103, 125, 24);
       tft.set_background(COLOR_BACKGROUND);
       if(seclect==4)
       {
         tft.add_rectangle(0, 0, 125, 24, COLOR_AXIS_HOMED);
       }
-      tft.add_text( 5, 3, color , "Z Offset:");
+      tft.add_text( 5, 3, color , GET_TEXT(MSG_Z_OFFSET));
       tft.add_text( 75, 3, color ,ftostr42_52( probe.offset.z));      
 //    }
 
@@ -868,10 +880,10 @@ void MenuItem_confirm::draw_select_screen(PGM_P const yes, PGM_P const no, const
 //    tft_string.add((char)('1' + extruder));
     tft_string.add(' ');
     tft_string.add(i16tostr3rj(thermalManager.degHotend(extruder)));
-//    tft_string.add(LCD_STR_DEGREE);
+    //tft_string.add(LCD_STR_DEGREE);
     tft_string.add(" / ");
     tft_string.add(i16tostr3rj(thermalManager.degTargetHotend(extruder)));
-//    tft_string.add(LCD_STR_DEGREE);
+    //tft_string.add(LCD_STR_DEGREE);
     tft_string.trim();
     tft.add_text(tft_string.center(TFT_WIDTH), MENU_TEXT_Y_OFFSET, COLOR_MENU_TEXT, tft_string);
   }
