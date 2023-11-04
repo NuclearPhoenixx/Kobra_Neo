@@ -28,7 +28,7 @@
 
 //extern const uint8_t Helvetica12Bold[];
 
-//extern const uint8_t Helvetica14[], Helvetica14_symbols[];
+extern const uint8_t /*Helvetica14[],*/ Helvetica14_symbols[];
 //extern const uint8_t Helvetica18[], Helvetica18_symbols[];
 
 

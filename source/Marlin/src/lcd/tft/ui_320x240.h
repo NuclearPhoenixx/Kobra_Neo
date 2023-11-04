@@ -37,6 +37,6 @@
 #define MENU_LINE_HEIGHT      (MENU_ITEM_HEIGHT + 2)
 
 #define MENU_FONT_NAME        ISO10646_CN
-//#define SYMBOLS_FONT_NAME     Helvetica14_symbols
+#define SYMBOLS_FONT_NAME     Helvetica14_symbols
 
 #include "ui_common.h"
