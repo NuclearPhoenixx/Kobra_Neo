@@ -280,7 +280,7 @@ void menu_main() {
   ;
 
   START_MENU();
-  BACK_ITEM(MSG_INFO_SCREEN);   //·Åµ½µ¹ÊýµÚ¶þ  
+  BACK_ITEM(MSG_INFO_SCREEN);   //ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½  
 
   if (busy) {
     #if MACHINE_CAN_PAUSE
@@ -306,7 +306,7 @@ void menu_main() {
     #if ENABLED(CANCEL_OBJECTS) && DISABLED(SLIM_LCD_MENUS)
       SUBMENU(MSG_CANCEL_OBJECT, []{ editable.int8 = -1; ui.goto_screen(menu_cancelobject); });
     #endif
-	 //BACK_ITEM(MSG_INFO_SCREEN);    //ÐÅÏ¢½çÃæ
+	 //BACK_ITEM(MSG_INFO_SCREEN);    //ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
   }
   else {
   	
@@ -341,7 +341,7 @@ void menu_main() {
     SUBMENU(MSG_CONFIGURATION, menu_configuration);
 	
 		
-  //BACK_ITEM(MSG_INFO_SCREEN);    //ÐÅÏ¢½çÃæ
+  //BACK_ITEM(MSG_INFO_SCREEN);    //ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
   #if HAS_MULTI_LANGUAGE
     SUBMENU(LANGUAGE_choose, menu_language);   //LANGUAGE
   #endif
@@ -354,20 +354,20 @@ void menu_main() {
 //  #endif
 
 //  #if HAS_TEMPERATURE
-//    SUBMENU(MSG_TEMPERATURE, menu_temperature);   //ÎÂ¶È·Åµ½¹¤¾ß
+//    SUBMENU(MSG_TEMPERATURE, menu_temperature);   //ï¿½Â¶È·Åµï¿½ï¿½ï¿½ï¿½ï¿½
 //  #endif
 
 //  #if HAS_POWER_MONITOR
 //    SUBMENU(MSG_POWER_MONITOR, menu_power_monitor);
 //  #endif
 
-//  #if ENABLED(MIXING_EXTRUDER)
-//    SUBMENU(MSG_MIXER, menu_mixer);
-//  #endif
+  #if ENABLED(MIXING_EXTRUDER)
+    SUBMENU(MSG_MIXER, menu_mixer);
+  #endif
 
-//  #if ENABLED(MMU2_MENUS)
-//    if (!busy) SUBMENU(MSG_MMU2_MENU, menu_mmu2);
-//  #endif
+  #if ENABLED(MMU2_MENUS)
+    if (!busy) SUBMENU(MSG_MMU2_MENU, menu_mmu2);
+  #endif
 
 
 
@@ -381,7 +381,7 @@ void menu_main() {
 //    }
 //  #endif
 
-//  #if ENABLED(ADVANCED_PAUSE_FEATURE)                //¸ü»»ºÄ²Ä¸Äµ½ÄÇ¸ö×¼±¸½çÃæ
+//  #if ENABLED(ADVANCED_PAUSE_FEATURE)                //ï¿½ï¿½ï¿½ï¿½ï¿½Ä²Ä¸Äµï¿½ï¿½Ç¸ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //    #if E_STEPPERS == 1 && DISABLED(FILAMENT_LOAD_UNLOAD_GCODES)
 //      YESNO_ITEM(MSG_FILAMENTCHANGE,
 //        menu_change_filament, ui.goto_previous_screen,
@@ -396,85 +396,85 @@ void menu_main() {
 //    SUBMENU(MSG_INFO_MENU, menu_info);
 //  #endif
 
-//  #if EITHER(LED_CONTROL_MENU, CASE_LIGHT_MENU)
-//    SUBMENU(MSG_LEDS, menu_led);
-//  #endif
+  #if EITHER(LED_CONTROL_MENU, CASE_LIGHT_MENU)
+    SUBMENU(MSG_LEDS, menu_led);
+  #endif
 
   //
   // Switch power on/off
   //
-//  #if ENABLED(PSU_CONTROL)
-//    if (powerManager.psu_on)
-//      #if ENABLED(PS_OFF_CONFIRM)
-//        CONFIRM_ITEM(MSG_SWITCH_PS_OFF,
-//          MSG_YES, MSG_NO,
-//          ui.poweroff, ui.goto_previous_screen,
-//          GET_TEXT(MSG_SWITCH_PS_OFF), (const char *)nullptr, PSTR("?")
-//        );
-//      #else
-//        GCODES_ITEM(MSG_SWITCH_PS_OFF, PSTR("M81"));
-//      #endif
-//    else
-//      GCODES_ITEM(MSG_SWITCH_PS_ON, PSTR("M80"));
-//  #endif
+  #if ENABLED(PSU_CONTROL)
+    if (powerManager.psu_on)
+      #if ENABLED(PS_OFF_CONFIRM)
+        CONFIRM_ITEM(MSG_SWITCH_PS_OFF,
+          MSG_YES, MSG_NO,
+          ui.poweroff, ui.goto_previous_screen,
+          GET_TEXT(MSG_SWITCH_PS_OFF), (const char *)nullptr, PSTR("?")
+        );
+      #else
+        GCODES_ITEM(MSG_SWITCH_PS_OFF, PSTR("M81"));
+      #endif
+    else
+      GCODES_ITEM(MSG_SWITCH_PS_ON, PSTR("M80"));
+  #endif
 
 //  #if ENABLED(SDSUPPORT) && DISABLED(MEDIA_MENU_AT_TOP)
 //    sdcard_menu_items();
 //  #endif
 
-//  #if HAS_SERVICE_INTERVALS
-//    static auto _service_reset = [](const int index) {
-//      print_job_timer.resetServiceInterval(index);
-//      ui.completion_feedback();
-//      ui.reset_status();
-//      ui.return_to_status();
-//    };
-//    #if SERVICE_INTERVAL_1 > 0
-//      CONFIRM_ITEM_P(PSTR(SERVICE_NAME_1),
-//        MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
-//        []{ _service_reset(1); }, ui.goto_previous_screen,
-//        GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_1), PSTR("?")
-//      );
-//    #endif
-//    #if SERVICE_INTERVAL_2 > 0
-//      CONFIRM_ITEM_P(PSTR(SERVICE_NAME_2),
-//        MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
-//        []{ _service_reset(2); }, ui.goto_previous_screen,
-//        GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_2), PSTR("?")
-//      );
-//    #endif
-//    #if SERVICE_INTERVAL_3 > 0
-//      CONFIRM_ITEM_P(PSTR(SERVICE_NAME_3),
-//        MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
-//        []{ _service_reset(3); }, ui.goto_previous_screen,
-//        GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_3), PSTR("?")
-//      );
-//    #endif
-//  #endif
+ #if HAS_SERVICE_INTERVALS
+   static auto _service_reset = [](const int index) {
+     print_job_timer.resetServiceInterval(index);
+     ui.completion_feedback();
+     ui.reset_status();
+     ui.return_to_status();
+   };
+   #if SERVICE_INTERVAL_1 > 0
+     CONFIRM_ITEM_P(PSTR(SERVICE_NAME_1),
+       MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
+       []{ _service_reset(1); }, ui.goto_previous_screen,
+       GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_1), PSTR("?")
+     );
+   #endif
+   #if SERVICE_INTERVAL_2 > 0
+     CONFIRM_ITEM_P(PSTR(SERVICE_NAME_2),
+       MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
+       []{ _service_reset(2); }, ui.goto_previous_screen,
+       GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_2), PSTR("?")
+     );
+   #endif
+   #if SERVICE_INTERVAL_3 > 0
+     CONFIRM_ITEM_P(PSTR(SERVICE_NAME_3),
+       MSG_BUTTON_RESET, MSG_BUTTON_CANCEL,
+       []{ _service_reset(3); }, ui.goto_previous_screen,
+       GET_TEXT(MSG_SERVICE_RESET), F(SERVICE_NAME_3), PSTR("?")
+     );
+   #endif
+ #endif
 
-//  #if HAS_GAMES && DISABLED(LCD_INFO_MENU)
-//    #if ENABLED(GAMES_EASTER_EGG)
-//      SKIP_ITEM();
-//      SKIP_ITEM();
-//      SKIP_ITEM();
-//    #endif
-//    // Game sub-menu or the individual game
-//    {
-//      SUBMENU(
-//        #if HAS_GAME_MENU
-//          MSG_GAMES, menu_game
-//        #elif ENABLED(MARLIN_BRICKOUT)
-//          MSG_BRICKOUT, brickout.enter_game
-//        #elif ENABLED(MARLIN_INVADERS)
-//          MSG_INVADERS, invaders.enter_game
-//        #elif ENABLED(MARLIN_SNAKE)
-//          MSG_SNAKE, snake.enter_game
-//        #elif ENABLED(MARLIN_MAZE)
-//          MSG_MAZE, maze.enter_game
-//        #endif
-//      );
-//    }
-//  #endif
+  #if HAS_GAMES && DISABLED(LCD_INFO_MENU)
+   #if ENABLED(GAMES_EASTER_EGG)
+     SKIP_ITEM();
+     SKIP_ITEM();
+     SKIP_ITEM();
+   #endif
+   // Game sub-menu or the individual game
+   {
+     SUBMENU(
+       #if HAS_GAME_MENU
+         MSG_GAMES, menu_game
+       #elif ENABLED(MARLIN_BRICKOUT)
+         MSG_BRICKOUT, brickout.enter_game
+       #elif ENABLED(MARLIN_INVADERS)
+         MSG_INVADERS, invaders.enter_game
+       #elif ENABLED(MARLIN_SNAKE)
+         MSG_SNAKE, snake.enter_game
+       #elif ENABLED(MARLIN_MAZE)
+         MSG_MAZE, maze.enter_game
+       #endif
+     );
+   }
+ #endif
 	
 
 }
@@ -501,7 +501,7 @@ void preheat_ABS()
    
 //    if (!g29_in_progress)
 //      SUBMENU(MSG_BED_LEVELING, menu_bed_leveling);
-//*********************Ô¤ÈÈ***************************************
+//*********************Ô¤ï¿½ï¿½***************************************
   
 	SUBMENU(MSG_PREHEAT_PLA,preheat_pla);
 	SUBMENU(MSG_PREHEAT_ABS,preheat_ABS);
@@ -519,8 +519,8 @@ void preheat_ABS()
 //      #endif
 //    }
 //  #endif
- //************************»»Ë¿****************************************** 
-//   #if ENABLED(ADVANCED_PAUSE_FEATURE)                //»»Ë¿
+ //************************ï¿½ï¿½Ë¿****************************************** 
+//   #if ENABLED(ADVANCED_PAUSE_FEATURE)                //ï¿½ï¿½Ë¿
 //    #if E_STEPPERS == 1 && DISABLED(FILAMENT_LOAD_UNLOAD_GCODES)
 //      YESNO_ITEM(MSG_FILAMENTCHANGE,
 //        menu_change_filament, ui.goto_previous_screen,
