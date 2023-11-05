@@ -550,13 +550,13 @@ void MarlinUI::draw_status_screen(char seclect) {
   
   // print duration
   char buffer[14];
-  if( blink)
+  if(blink && !busy)
   {
-    color=COLOR_VIVID_GREEN;
+    color=COLOR_GREY;
   }
   else
   {
-    color=COLOR_GREY;
+    color=COLOR_VIVID_GREEN;
   }
   duration_t elapsed = print_job_timer.duration();
   elapsed.toDigital(buffer);
