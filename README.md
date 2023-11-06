@@ -12,6 +12,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Increased probing accuracy by doing multiple probes per point
 - Increased speed for the first Z-probe approach when double-probing
 - Fixed ABL probe's y-offset coordinates
+- Extrapolate bed leveling beyond the 5x5 grid
 - Enabled quick home (X and Y homes at the same time)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
@@ -25,6 +26,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
   - Only blink Print Time in the status menu when idle and not printing
   - Unlocked more languages and enabled missing translations in some menus (*[need help with the translations!](https://github.com/NuclearPhoenixx/Kobra_Neo/issues/1)*)
   - Fixed the Z-Offset not showing in the Tune menu when printing
+  - Automatically open the file menu when connecting an SD Card
 - Halfed startup time from about 10s to 5s
 - Default values of the original Anycubic firmware for the E-Steps and PID values so you can use this FW as a drop-in replacement for the official FW
 - Increased Z-babystepping resolution to 0.01mm from 0.02mm
