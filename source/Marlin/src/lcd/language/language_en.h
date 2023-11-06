@@ -41,7 +41,7 @@
 #endif
 #undef en
 
-#define MEDIA_TYPE_EN "SD card"
+#define MEDIA_TYPE_EN "SD Card"
 
 namespace Language_en {
   constexpr uint8_t CHARSIZE              = 2;
