@@ -33,6 +33,8 @@ namespace Language_de {
 
   constexpr uint8_t CHARSIZE              = 2;
   LSTR LANGUAGE                           = _UxGT("Deutsch");
+  LSTR MSG_ABOUT                        	= _UxGT("Über");
+  LSTR LANGUAGE_choose                    = _UxGT("Sprache");   
 
   LSTR WELCOME_MSG                        = MACHINE_NAME _UxGT(" bereit");
   LSTR MSG_YES                            = _UxGT("JA");
