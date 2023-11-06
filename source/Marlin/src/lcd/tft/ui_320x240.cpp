@@ -437,7 +437,13 @@ void MarlinUI::draw_status_screen(char seclect) {
         }
 		
         tft.add_image(1, 1, imgSettings, COLOR_VIVID_GREEN);
-		tft.add_text( 34, 8, COLOR_VIVID_GREEN , "Menu");  
+  
+  if (busy)
+  {
+    tft.add_text( 34, 8, COLOR_VIVID_GREEN , GET_TEXT(MSG_TUNE));  
+  } else {
+    tft.add_text( 34, 8, COLOR_VIVID_GREEN , GET_TEXT(MSG_MAIN_SHORT));  
+  }
      
      //print sd card  
   tft.canvas(115, 140, 48, 48);
