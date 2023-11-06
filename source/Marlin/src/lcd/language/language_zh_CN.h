@@ -36,7 +36,7 @@ namespace Language_zh_CN {
 
   LSTR MSG_ABOUT                          = _UxGT("关于");
   LSTR LANGUAGE                           = _UxGT("中文");
-  LSTR LANGUAGE_2                         = _UxGT("英文");
+  //LSTR LANGUAGE_2                       = _UxGT("英文");
   LSTR heat_MSG                           = _UxGT("加热喷嘴");  
   LSTR heat_waitMSG                       = _UxGT("请等待...");  
   LSTR Tool_MSG                           = _UxGT("工具");

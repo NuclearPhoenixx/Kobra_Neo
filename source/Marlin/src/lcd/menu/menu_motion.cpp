@@ -559,7 +559,7 @@ void menu_motion() {
   //
  
   #if HAS_TEMPERATURE
-    SUBMENU(MSG_TEMPERATURE, menu_temperature);   //ÎÂ¶È·Åµ½¹¤¾ß
+    SUBMENU(MSG_TEMPERATURE, menu_temperature);   //ï¿½Â¶È·Åµï¿½ï¿½ï¿½ï¿½ï¿½
   #endif
   
  
@@ -567,7 +567,7 @@ void menu_motion() {
   END_MENU();
 }
 
-//********************µç»úÒÆ¶¯×¨ÓÃ**********************
+//********************ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½×¨ï¿½ï¿½**********************
 void LCD_goto_manual_move(const_float_t scale,const AxisEnum axis) {
   ui.defer_status_screen();
   ui.manual_move.menu_scale = 0.1;
@@ -611,7 +611,7 @@ void preheat_to_move_E()
 
               tft.canvas(110, 80, 160, 30);
               tft.set_background(COLOR_BACKGROUND);
-              tft_string.set(GET_TEXT(heat_MSG));
+              tft_string.set(GET_TEXT(MSG_HEATING));
               tft_string.trim();
               tft.add_text(0,5,COLOR_WHITE,tft_string);     
               

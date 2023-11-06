@@ -49,8 +49,7 @@ namespace Language_en {
   LSTR MSG_WAIT_LEVELING_HEAT             = _UxGT("Heating up before leveling...");
   LSTR MSG_ABOUT                        	= _UxGT("About");
   LSTR LANGUAGE                           = _UxGT("English");
-  LSTR LANGUAGE_2                         = _UxGT("English");
-  LSTR heat_MSG                           = _UxGT("Nozzle Heating");  
+  //LSTR LANGUAGE_2                       = _UxGT("English");
   LSTR heat_waitMSG                       = _UxGT("Please Wait...");  
   LSTR Tool_MSG                           = _UxGT("Tool");
   LSTR Operate_MSG                        = _UxGT("Operate the machine");    
@@ -554,8 +553,8 @@ namespace Language_en {
   LSTR MSG_ERR_MINTEMP                    = _UxGT("Err: MINTEMP");
   LSTR MSG_HALTED                         = _UxGT("PRINTER HALTED");
   LSTR MSG_PLEASE_RESET                   = _UxGT("Please Reset");
-  LSTR MSG_HEATING                        = _UxGT("Heating...");
-  LSTR MSG_COOLING                        = _UxGT("Cooling...");
+  LSTR MSG_HEATING                        = _UxGT("Heating Nozzle...");
+  LSTR MSG_COOLING                        = _UxGT("Cooling  Nozzle...");
   LSTR MSG_BED_HEATING                    = _UxGT("Bed Heating...");
   LSTR MSG_BED_COOLING                    = _UxGT("Bed Cooling...");
   LSTR MSG_PROBE_HEATING                  = _UxGT("Probe Heating...");
