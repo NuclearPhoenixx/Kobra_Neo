@@ -11,13 +11,23 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Enabled "Host Actions" and "Host Action Prompts" with support for the printer UI (allows starting/pausing/resuming of Octoprint prints)
 - Increased probing accuracy by doing multiple probes per point
 - Increased speed for the first Z-probe approach when double-probing
+- Fixed ABL probe's y-offset coordinates
 - Enabled quick home (X and Y homes at the same time)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
-- Fixed ABL probe's y-offset coordinates
 - Disabled power-loss recovery by default to help with print quality (can still be enabled manually)
-- UI changes - dark(er) background, removed ugly yellow text color, fixed typos, more languages (*need help for translations!*), scroll long file names, ...
+- UI changes:
+  - Dark background (not just black!)
+  - Removed ugly yellow text color
+  - Fixed typos
+  - Scroll long file names (also in the SD card menu)
+  - Do not blink Z-Offset in the status menu
+  - Only blink Print Time in the status menu when idle and not printing
+  - Unlocked more languages and enabled missing translations in some menus (*[need help with the translations!](https://github.com/NuclearPhoenixx/Kobra_Neo/issues/1)*)
+  - Fixed the Z-Offset not showing in the Tune menu when printing
 - Halfed startup time from about 10s to 5s
+- Default values of the original Anycubic firmware for the E-Steps and PID values so you can use this FW as a drop-in replacement for the official FW
+- Increased Z-babystepping resolution to 0.01mm from 0.02mm
 
 ## A note on Linear Advance (and why it's not enabled)
 
