@@ -10,6 +10,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Enabled extra menu items (Leveling->Edit Mesh + Bed Tramming, Configuration->Controller Fan, Advanced Settings, etc...)
 - Enabled "Host Actions" and "Host Action Prompts" with support for the printer UI (allows starting/pausing/resuming of Octoprint prints)
 - Increased probing accuracy by doing multiple probes per point
+- Increase probing grid from 5x5 to 6x6 points
 - Increased speed for the first Z-probe approach when double-probing
 - Fixed ABL probe's y-offset coordinates
 - Extrapolate bed leveling beyond the 5x5 grid
