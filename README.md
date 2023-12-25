@@ -1,4 +1,6 @@
-# Kobra Neo Firmware V1.3.3 NuclearPhoenix-Mod
+# Kobra Neo Firmware (NuclearPhoenix-Mod)
+
+**This is the most enhanced and modified Marlin-based firmware for the Neo at the moment. See below for an overview of the changes.**
 
 Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by Anycubic, see below for all the changes. This firmware has been changed to be a drop-in replacement of the old firmware. This means that it retains all the original e-steps and PID values and tries to not change some other default values too aggressively. However, unlocks and similar features were kept of course. I also added some new stuff and changed some things up from the original jokubasver fork.
 
