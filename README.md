@@ -27,7 +27,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
   - Scroll long file names (also in the SD card menu)
   - Do not blink Z-Offset in the status menu
   - Only blink Print Time in the status menu when idle and not printing
-  - Unlocked more languages and enabled missing translations in some menus (*[need help with the translations!](https://github.com/NuclearPhoenixx/Kobra_Neo/issues/1)*)
+  - Unlocked more languages and enabled missing translations in some menus
   - Fixed the Z-Offset not showing in the Tune menu when printing
   - Automatically open the file menu when connecting an SD Card
 - Halfed startup time from about 10s to 5s
