@@ -6,6 +6,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 
 ## Features
 
+- Default values of the original Anycubic firmware for the E-Steps and PID values so you can use this FW as a drop-in replacement for the official FW
 - Increased default extruder max feedrate from 25 to 50 (now retraction speed is not limited to 25mm/s)
 - X and Y default max acceleration increased from 500 to 1000
 - Default X and Y jerk increased from 5 to 8
@@ -15,7 +16,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
 - Increase probing grid from 5x5 to 6x6 points
 - Increased speed for the first Z-probe approach when double-probing
 - Fixed ABL probe's y-offset coordinates
-- Extrapolate bed leveling beyond the 5x5 grid
+- Extrapolate bed leveling beyond the 6x6 grid
 - Enabled quick home (X and Y homes at the same time)
 - Enable M117 Gcode for setting messages to printer screen
 - Enable M73 Gcode for setting progress bar on printer screen
@@ -31,7 +32,6 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
   - Fixed the Z-Offset not showing in the Tune menu when printing
   - Automatically open the file menu when connecting an SD Card
 - Halfed startup time from about 10s to 5s
-- Default values of the original Anycubic firmware for the E-Steps and PID values so you can use this FW as a drop-in replacement for the official FW
 - Increased Z-babystepping resolution to 0.01mm from 0.02mm
 
 ## A note on Linear Advance (and why it's not enabled)
