@@ -1,6 +1,6 @@
 # Kobra Neo Firmware (NuclearPhoenix-Mod)
 
-**This is the most enhanced and modified Marlin-based firmware for the Neo at the moment. See below for an overview of the changes.**
+**This is (probably?) the most enhanced and modified Marlin-based firmware for the Neo at the moment. See below for an overview of the changes.**
 
 Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by Anycubic, see below for all the changes. This firmware has been changed to be a drop-in replacement of the old firmware. This means that it retains all the original e-steps and PID values and tries to not change some other default values too aggressively. However, unlocks and similar features were kept of course. I also added some new stuff and changed some things up from the original jokubasver fork.
 
@@ -47,6 +47,8 @@ There is a fork of mainline [Marlin for HC32F46x MCUs](https://github.com/shadow
 ## Flashing
 
 Copy `firmware.bin` to your microSD card, insert the card with the printer off, turn printer on and wait until you get to the home screen. Afterwards, delete the firmware.bin file from your card.
+
+The onboard EEPROM storage _might_ be reset, but it might also keep all saved data. If you experience weird behavior or you want to be extra sure that everything is correct, **you can reset the EEPROM storage** and revert back to the default settings with this after a firmware update. This is especially recommended after larger updates or if you're moving to an entirely different fork or type of firmware.
 
 ## (IMPORTANT) Before printing
 
