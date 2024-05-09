@@ -229,8 +229,8 @@ void menu_tune() {
       SUBMENU(MSG_BABYSTEP_Y, []{ _lcd_babystep_go(_lcd_babystep_y); });
     #endif
     #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
-      //SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
-      EDIT_ITEM(float42_52, MSG_ZPROBE_ZOFFSET, &probe.offset.z, -5.00, 5.00, []{ lcd_babystep_zoffset(); });
+      SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
+      //EDIT_ITEM(float42_52, MSG_ZPROBE_ZOFFSET, &probe.offset.z, -5.00, 5.00, []{ lcd_babystep_zoffset(); });
     #else
       SUBMENU(MSG_BABYSTEP_Z, lcd_babystep_z);
     #endif
