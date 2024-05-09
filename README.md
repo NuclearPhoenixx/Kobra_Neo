@@ -29,7 +29,7 @@ Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by A
   - Do not blink Z-Offset in the status menu
   - Only blink Print Time in the status menu when idle and not printing
   - Unlocked more languages and enabled missing translations in some menus
-  - Fixed the Z-Offset not showing in the Tune menu when printing
+  - ~Fixed the Z-Offset not showing in the Tune menu when printing~
   - Automatically open the file menu when connecting an SD Card
 - Decreased startup time from about 10s to 5s
 - Increased Z-babystepping resolution to 0.01mm from 0.02mm
