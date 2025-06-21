@@ -4,6 +4,8 @@
 
 Heavily modified firmware for the Anycubic Kobra Neo. Based on the original by Anycubic, see below for all the changes. This firmware has been changed to be a drop-in replacement of the old firmware. This means that it retains all the original e-steps and PID values and tries to not change some other default values too aggressively. However, unlocks and similar features were kept of course. I also added some new stuff and changed some things up from the original jokubasver fork.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J61GLR3G)
+
 ## Features
 
 - Default values of the original Anycubic firmware for the E-Steps and PID values so you can use this FW as a drop-in replacement for the official FW
